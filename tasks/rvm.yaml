@@ -1,0 +1,29 @@
+---
+
+- name: Install mpapis public key
+  shell: gpg --keyserver hkp://keys.gnupg.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3
+
+- name: Download the installer
+  get_url:
+    url: https://raw.githubusercontent.com/rvm/rvm/master/binscripts/rvm-installer
+    dest: '{{rvm_installer}}'
+  notify: Remove the installer
+
+- name: Download the installer signature
+  get_url:
+    url: https://raw.githubusercontent.com/rvm/rvm/master/binscripts/rvm-installer.asc
+    dest: '{{rvm_installer_signature}}'
+  notify: Remove the installer signature
+
+- name: Verify the installer signature
+  shell: gpg --verify {{rvm_installer_signature}}
+
+- name: Run the installer
+  shell: "bash {{rvm_installer}} stable"
+
+- name: Install RVM requirements
+  shell: "{{rvm}} requirements"
+  args:
+    executable: /bin/bash
+
+- meta: flush_handlers

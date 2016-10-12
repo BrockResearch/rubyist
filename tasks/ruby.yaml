@@ -1,0 +1,12 @@
+---
+
+- name: Install the interpreter
+  shell: "{{rvm}} install ruby-{{item}}"
+  args:
+    executable: /bin/bash
+  with_items: "{{ ruby_versions }}"
+
+- name: Set the installed interpreter as the default
+  shell: "{{rvm}} alias create default {{default_ruby_version}}"
+  args:
+    executable: /bin/bash

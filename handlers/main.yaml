@@ -1,0 +1,8 @@
+---
+# handlers file for rubyist
+
+- name: Remove the installer
+  file: path='{{rvm_installer}}' state=absent
+
+- name: Remove the installer signature
+  file: path='{{rvm_installer_signature}}' state=absent

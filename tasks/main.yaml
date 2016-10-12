@@ -1,0 +1,6 @@
+---
+# tasks file for rubyist
+
+- include: rvm.yaml
+- include: ruby.yaml
+- include: gem.yaml
