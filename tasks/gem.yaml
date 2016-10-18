@@ -1,6 +1,6 @@
 ---
 
-- name: Install default gems prerequisite packages
+- name: Install default gems prerequisite OS packages
   apt:
     name={{ item.name }}={{ item.version }} 
     state=present 
