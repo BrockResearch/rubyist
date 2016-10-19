@@ -21,8 +21,20 @@ default_gemset:
   gems:
     - {name: rspec, version: 3.5.0}
     - {name: cucumber, version: 2.4.0}
+    - {name: gherkin, version: 4.0.0}
+    - {name: aruba, version: 0.14.2}
+    - {name: rake, version: 11.3.0}
+    - {name: thor, version: 0.19.1}
+    - {name: daemons, version: 1.2.4}
+    - {name: eventmachine, version: 1.2.0.1}
     - {name: libxml-ruby, version: 2.9.0}
     - {name: nokogiri, version: 1.6.8.1}
+    - {name: json, version: 2.0.2}
+    - {name: bson, version: 4.1.1}
     - {name: psych, version: 2.1.1}
-    - {name: rake, version: 11.3.0}
-    - {name: sqlite3, version: 1.3.11}
+    - {name: mongo, version: 2.3.0}
+    - {name: sqlite3, version: 1.3.12}
+    - {name: httparty, version: 0.14.0}
+    - {name: rest-client, version: 2.0.0}
+    - {name: highline, version: 1.7.8}
+    - {name: bcrypt, version: 3.1.11}
