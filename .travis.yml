@@ -25,5 +25,8 @@ script:
   # Basic role syntax check
   - ansible-playbook tests/test.yml -i tests/inventory --syntax-check
 
+  # Basic play check
+  - ansible-playbook -i tests/inventory tests/playbook.yml --connection=local
+
 notifications:
   webhooks: https://galaxy.ansible.com/api/v1/notifications/
