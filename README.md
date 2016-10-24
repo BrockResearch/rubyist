@@ -94,7 +94,7 @@ default_gemset:
 Dependencies
 ------------
 
-Rubyist is a self contained roles.
+Rubyist is a self-contained role.
 
 
 Installation
@@ -203,4 +203,4 @@ Licensed under the MIT License. See the [LICENSE](./LICENSE) file for details.
 Author Information
 ------------------
 
-An optional section for the role authors to include contact information, or a website (HTML is not allowed).
+Brett Brock for Brock Research LLC.
