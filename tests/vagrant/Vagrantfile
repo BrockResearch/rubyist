@@ -1,0 +1,8 @@
+Vagrant.configure(2) do |config|
+  config.vm.box = 'brockresearch/trusty'
+  config.vm.hostname = 'rubyist'
+  config.ssh.username = 'brock'
+  config.vm.provision 'ansible' do |ansible|
+    ansible.playbook = 'test.yml'
+  end
+end
